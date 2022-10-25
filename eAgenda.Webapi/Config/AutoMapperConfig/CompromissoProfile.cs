@@ -9,7 +9,9 @@ namespace eAgenda.Webapi.Config.AutoMapperConfig
         public CompromissoProfile()
         {
             CreateMap<FormsCompromissoViewModel, Compromisso>()
-                .ForMember(destino => destino.UsuarioId, opt => opt.MapFrom<UsuarioResolver>());
+                .ForMember(destino => destino.UsuarioId, opt => opt.MapFrom<UsuarioResolver>())
+
+                 .ForMember(destino => destino.Id, opt => opt.Ignore());
 
             CreateMap<Compromisso, ListarCompromissoViewModel>()
                 .ForMember(d => d.Data, opt => opt.MapFrom(o => o.Data.ToShortDateString()))
@@ -18,6 +20,8 @@ namespace eAgenda.Webapi.Config.AutoMapperConfig
                 .ForMember(d => d.NomeContato, opt => opt.MapFrom(o => o.Contato.Nome));
 
             CreateMap<Compromisso, VisualizarCompromissoViewModel>();
+
+            CreateMap<Compromisso, FormsCompromissoViewModel>();
         }
     }
 }
