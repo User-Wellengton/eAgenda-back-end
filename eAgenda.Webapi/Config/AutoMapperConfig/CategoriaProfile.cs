@@ -22,8 +22,7 @@ namespace eAgenda.Webapi.Config.AutoMapperConfig
             CreateMap<Categoria, FormsCategoriaViewModel>();
 
             CreateMap<Categoria, CategoriaSelecionadaViewModel>();
-
-          
+                      
         }
     }
 }
