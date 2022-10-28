@@ -15,7 +15,7 @@ namespace eAgenda.Webapi.ViewModels.ModuloDespesa
 
         public FormaPgtoDespesaEnum FormaPagamento { get; set; }
 
-        public List<CategoriaSelecionadaViewModel> CategoriasSelecionadas { get; set; }
+        public List<CategoriaSelecionadaViewModel> Categorias { get; set; }
 
 
     }

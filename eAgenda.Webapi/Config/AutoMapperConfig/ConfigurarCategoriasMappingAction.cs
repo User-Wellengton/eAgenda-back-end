@@ -15,7 +15,7 @@ namespace eAgenda.Webapi.Config.AutoMapperConfig
 
         public void Process(FormsDespesaViewModel despesaVM, Despesa despesa, ResolutionContext context)
         {
-            foreach (var categoriaVM in despesaVM.CategoriasSelecionadas)
+            foreach (var categoriaVM in despesaVM.Categorias)
             {
                 var categoria = repositorioCategoria.SelecionarPorId(categoriaVM.Id);
 

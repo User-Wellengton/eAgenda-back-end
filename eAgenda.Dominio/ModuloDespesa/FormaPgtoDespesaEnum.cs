@@ -3,9 +3,11 @@
 namespace eAgenda.Dominio.ModuloDespesa
 {
     public enum FormaPgtoDespesaEnum
-    {        
-        PIX, 
-        
+    {
+        [Description("PIX")]
+        PIX,
+
+        [Description("Dinheiro")]
         Dinheiro,
 
         [Description("Cartão de Crédito")]
